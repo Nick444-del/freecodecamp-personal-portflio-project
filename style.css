@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --link: #05386B;
+    --primary: #5CDB95;
+    --secondary: #8EE4AF;
+    --font: #EDF5E1;
+    --dark: #379683;
+    --twitter: #1DA1F2;
+    --facebook: #3b5998;
+    --linkedin: #0e76a8;
+    --github: #4078c0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono';
+}
+
+/* Home Section Start */
+
+#welcome-section{
+    background: url(./images/fotis-fotopoulos-DuHKoV44prg-unsplash.jpg);
+    text-align: center;
+    color: #fff;
+    align-items: center;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#welcome-section::after{
+    content: "";
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+}
+
+#welcome-section *{
+    position: relative;
+    z-index: 1;
+}
+
+#welcome-section h1{
+    font-size: 55px;
+    padding: 15px;
+    color: var(--secondary);
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+
+#welcome-section p{
+    font-size: 50px;
+    color: var(--primary);
+}
+
+#welcome-section b{
+    color: var(--link);
+}
+
+/* Home Section End */
+
+/* footer start here */
+#footer{
+    background: var(--link);
+    color: #fff;
+    text-align: center;
+    padding: 5rem;
+}
+/* footer end here */
+
+/* navigation section start here */
+
+header{
+    height: 100vh;
+}
+
+#navbar{
+    background: var(--dark);
+    padding: 15px;
+    justify-content: space-between;
+    display: flex;
+    text-transform: uppercase;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    position: relative;
+}
+
+#right-nav a::after{
+    content: '';
+    border-bottom: 3px solid #05386B;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(10px);
+    height: 100%;
+    width: 100%;
+}
+
+#right-nav a:hover::after{
+    transform: translateY(0);
+}
+
+#navbar a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--link);
+    font-size: 25px;
+    margin: 25px;
+    top: -25%;
+    font-weight: 700;
+}
+
+#navbar h2{
+    font-size: 35px;
+}
+
+/* navigation section end here */
+
+/* Contact section start */
+
+#contact{
+    text-align: center;
+    background: var(--dark);
+    padding: 50px;
+}
+
+#contact h2{
+    color: var(--font);
+    font-size: 35px;
+    margin-bottom: 0;
+}
+
+#contact p{
+    color: var(--font);
+    font-size: 25px;
+    margin-top: 0;
+}
+
+#contact ul{
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+#contact ul a{
+    color: #fff;
+    text-decoration: none;
+    margin: 15px;
+    font-size: 20px;
+    justify-content: space-between;
+}
+
+.facebook{
+    background: var(--facebook);
+    padding: 8px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.twitter{
+    background: var(--twitter);
+    padding: 8px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.linkedin{
+    background: var(--linkedin);
+    padding: 8px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.github{
+    background: var(--github);
+    padding: 8px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+
+/* Contact section end's */
+
+/* project start here */
+
+#projects{
+    text-align: center;
+    background: var(--link);
+    color: #fff;
+    padding: 50px;
+}
+
+.project-tile{
+    margin: 10px;
+    width: 400px;
+    transition: transform 0.3s ease;
+}
+
+.project-tile:hover{
+    transform: scale(1.2)
+}
+
+.projects p{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.project-tile a{
+    font-size: 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.project-tile img{
+    max-width: 100%;
+}
+
+.projects-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 810px;
+    margin: 20px auto 0;
+}
+/* project end here */
+
+
+/* media query */
+
+@media (max-width: 440px){
+    .contact{
+        padding: 20px;
+    }
+}
